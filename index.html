@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CesarVentas Pro</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    color:white;
+    background:url('fondo.jpg') no-repeat center center/cover;
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:15px;
+    background:rgba(0,0,0,0.8);
+}
+
+.logo{
+    height:40px;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:60px;
+    background:rgba(0,0,0,0.6);
+}
+
+/* PRODUCTOS */
+.productos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    background:rgba(0,0,0,0.8);
+    border-radius:12px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:15px;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    border:none;
+    background:#00ffcc;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+}
+
+.whatsapp img{
+    width:60px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.8);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<img src="logo.png" class="logo">
+<div>🚀 CesarVentas</div>
+</nav>
+
+<section class="hero">
+<h1>🔥 TIENDA PREMIUM FREE FIRE</h1>
+<p>Mods • Cheats • Servicios exclusivos</p>
+</section>
+
+<section class="productos">
+
+<div class="card">
+<img src="hg.jpg">
+<div class="card-content">
+<h3>HG Cheats</h3>
+<p>1 día: S/6</p>
+<p>7 días: S/25</p>
+<p>30 días: S/36</p>
+<button onclick="comprar('HG Cheats')">Comprar</button>
+</div>
+</div>
+
+<div class="card">
+<img src="booyah.jpg">
+<div class="card-content">
+<h3>Pases Booyah</h3>
+<p>Precio: S/7</p>
+<button onclick="comprar('Pases Booyah')">Comprar</button>
+</div>
+</div>
+
+</section>
+
+<section style="text-align:center;">
+<h2>💰 Métodos de pago</h2>
+<p>✔ Yape</p>
+<p>✔ Plin</p>
+<p>✔ Transferencia</p>
+<p>✔ Binance</p>
+</section>
+
+<a href="https://wa.me/51900398874" class="whatsapp">
+<img src="whatsapp.png">
+</a>
+
+<footer>
+<p>© 2026 CesarVentas</p>
+</footer>
+
+<script>
+function comprar(producto){
+    let mensaje="Hola, quiero comprar: "+producto;
+    window.open("https://wa.me/51900398874?text="+encodeURIComponent(mensaje));
+}
+</script>
+
+</body>
+</html>
